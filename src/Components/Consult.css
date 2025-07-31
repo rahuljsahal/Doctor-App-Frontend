@@ -1,0 +1,111 @@
+/* Consult.css */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('/path-to-your-background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  backdrop-filter: blur(4px);
+}
+
+.consult-container {
+  max-width: 500px;
+  margin: 60px auto;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  padding: 30px 40px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  color: #102a43;
+}
+
+.consult-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #023e8a;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  box-sizing: border-box; /* Ensures padding doesn't break the width */
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #bcd4e6;
+  font-size: 16px;
+  background-color: #f5faff;
+  color: #102a43;
+  transition: border 0.2s ease-in-out;
+  display: block;
+}
+
+
+.form-group input:focus,
+.form-group select:focus {
+  border: 1.5px solid #0077b6;
+  outline: none;
+}
+
+.consult-summary {
+  background-color: #eaf4fb;
+  border: 1px solid #bde0fe;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 30px;
+}
+
+.consult-summary h3 {
+  margin-bottom: 12px;
+  color: #0077b6;
+  font-size: 18px;
+}
+
+.consult-summary p,
+.consult-summary h4 {
+  margin: 6px 0;
+  font-weight: 500;
+}
+
+.message {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #d1f7ff;
+  color: #005f73;
+  text-align: center;
+  font-weight: 500;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 14px;
+  font-size: 17px;
+  background-color: #0077b6;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 25px;
+}
+
+button[type="submit"]:hover {
+  background-color: #023e8a;
+}
+
+button[type="submit"]:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

@@ -1,0 +1,391 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --primary-color: #4CAF50; /* A vibrant green for main actions */
+    --primary-dark: #388E3C;
+    --secondary-color: #2196F3; /* A calming blue for secondary actions */
+    --secondary-dark: #1976D2;
+    --accent-color: #FFC107; /* A warm yellow for highlights/warnings */
+    --text-dark: #333;
+    --text-light: #f4f7f6;
+    --bg-light: #f4f7f6;
+    --bg-medium: #e0e0e0;
+    --bg-white: #ffffff;
+    --border-color: #ddd;
+    --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.08);
+    --shadow-medium: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* A modern, clean font */
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Space between sections */
+}
+
+h1, h2 {
+    font-family: 'Montserrat', sans-serif; /* A bold, stylish font for headings */
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.8em;
+}
+
+h2 {
+    font-size: 2.2em;
+    text-align: center;
+}
+
+p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* --- Button Styling (Reusable) --- */
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05em;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none; /* Default to no border */
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-tertiary {
+    background-color: var(--accent-color);
+    color: var(--text-dark);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-tertiary:hover {
+    background-color: #e0a800;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    transform: translateY(-2px);
+}
+
+
+/* --- Section Styling --- */
+section {
+    background-color: var(--bg-white);
+    border-radius: 12px;
+    padding: 50px;
+    box-shadow: var(--shadow-light);
+    text-align: center;
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: linear-gradient(to right, #eaf9ed, #d2f0d6); /* Subtle gradient */
+    padding: 80px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-medium);
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-section h1 {
+    font-size: 3.5em;
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 1.3em;
+    color: #4a6c7c;
+    margin-bottom: 40px;
+}
+
+/* Book Slot Section */
+.book-slot-section {
+    background-color: #f7fcfa; /* Very light green-blue */
+    border: 1px solid #e0f2f1;
+}
+
+/* Our Partner Hospitals Section */
+.our-partners-section {
+    background-color: #fcf9f2; /* Very light yellow */
+    border: 1px solid #fff2cc;
+}
+
+.hospital-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.hospital-logos img {
+    max-width: 180px;
+    height: 90px;
+    object-fit: contain;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 15px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hospital-logos img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Patients Testimonies Section */
+.patients-testimonies-section {
+    background-color: #fcf6ff; /* Very light purple */
+    border: 1px solid #f3e5f5;
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial-slider {
+    position: relative;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonial-card {
+    background-color: var(--bg-white);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: var(--shadow-medium);
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    text-align: center;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: fadeInSlideUp 0.8s ease-out forwards;
+}
+
+.testimonial-quote {
+    font-size: 1.4em;
+    font-style: italic;
+    color: var(--text-dark);
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.testimonial-author {
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 1.2em;
+}
+
+.slider-nav {
+    margin-top: 20px;
+    display: flex;
+    gap: 12px;
+}
+
+.nav-dot {
+    width: 14px;
+    height: 14px;
+    background-color: var(--border-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-dot.active {
+    background-color: var(--primary-color);
+    transform: scale(1.2);
+}
+
+.nav-dot:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Admin/User Specific Sections Container */
+.admin-sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 30px;
+}
+
+.add-hospital-section,
+.add-doctor-section {
+    background-color: #e3f2fd; /* Light blueish for these sections */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 250px;
+    box-shadow: var(--shadow-light);
+}
+
+.add-hospital-section h2,
+.add-doctor-section h2 {
+    font-size: 1.9em;
+    margin-bottom: 15px;
+    color: var(--secondary-dark);
+}
+
+/* --- Animations --- */
+@keyframes fadeInSlideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+    h1 {
+        font-size: 2.5em;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+    p {
+        font-size: 1em;
+    }
+    .hero-section {
+        padding: 60px 30px;
+    }
+    section {
+        padding: 40px;
+    }
+    .testimonial-quote {
+        font-size: 1.2em;
+    }
+    .admin-sections {
+        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .home-container {
+        padding: 15px;
+        gap: 20px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    h2 {
+        font-size: 1.6em;
+    }
+    .btn {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+    .hero-section {
+        padding: 50px 20px;
+    }
+    section {
+        padding: 30px;
+    }
+    .hospital-logos {
+        gap: 20px;
+    }
+    .hospital-logos img {
+        max-width: 150px;
+        height: 80px;
+    }
+    .testimonial-card {
+        padding: 30px;
+        min-height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+    h2 {
+        font-size: 1.4em;
+    }
+    p {
+        font-size: 0.95em;
+    }
+    .hero-section {
+        padding: 40px 15px;
+    }
+    section {
+        padding: 25px;
+    }
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+    .hospital-logos {
+        flex-direction: column; /* Stack logos on very small screens */
+        align-items: center;
+    }
+    .hospital-logos img {
+        max-width: 200px;
+        height: auto; /* Auto height for better scaling */
+    }
+    .testimonial-card {
+        padding: 25px;
+        min-height: 120px;
+    }
+    .testimonial-quote {
+        font-size: 1.1em;
+    }
+    .testimonial-author {
+        font-size: 1em;
+    }
+}
