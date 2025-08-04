@@ -23,7 +23,7 @@ const AddDept = () => {
 const handleAddDept = async (e) => {
     e.preventDefault();
     try{
-        const response = await axios.post('https://localhost:7144/api/Admin/addDept',{
+        const response = await axios.post('https://doctorappbackend20250804110728-edaah8asafcaerbc.eastasia-01.azurewebsites.net/api/Admin/addDept',{
             DeptName: DeptName
         });
         
