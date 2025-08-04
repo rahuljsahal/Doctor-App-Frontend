@@ -52,7 +52,7 @@ const SignIn = () => {
     };
 
     try {
-      const response = await axios.post('https://localhost:7144/api/Authentication/SignIn', payload);
+      const response = await axios.post('https://doctorappbackend20250804110728-edaah8asafcaerbc.eastasia-01.azurewebsites.net/api/Authentication/SignIn', payload);
       console.log(response.data);
       setMessage(response.data.msg || 'Login successful!');
 

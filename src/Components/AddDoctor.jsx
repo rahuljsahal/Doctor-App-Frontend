@@ -18,7 +18,7 @@ const AddDoctor = () => {
   const [departments,setDepartments] = useState([]);
   //Fetch Departments
   useEffect(() =>{
-    axios.get("https://localhost:7144/api/Doctors/departments")
+    axios.get("https://doctorappbackend20250804110728-edaah8asafcaerbc.eastasia-01.azurewebsites.net/api/Doctors/departments")
     .then((res) =>{
       setDepartments(res.data);
     })
@@ -38,7 +38,7 @@ const AddDoctor = () => {
 
     try {
       const response = await axios.post(
-        "https://localhost:7144/api/Doctors/addDoctor",
+        "https://doctorappbackend20250804110728-edaah8asafcaerbc.eastasia-01.azurewebsites.net/api/Doctors/addDoctor",
         doctorData
       );
 

@@ -27,7 +27,7 @@ const Consult = () => {
     const [message, setMessage] = useState('');
 
     useEffect(() => {
-        axios.get('https://localhost:7144/api/Consult/department')
+        axios.get('https://doctorappbackend20250804110728-edaah8asafcaerbc.eastasia-01.azurewebsites.net/api/Consult/department')
             .then(res => {
                 setAllDepartments(res.data);
                 setFilteredDepartments(res.data);
@@ -37,7 +37,7 @@ const Consult = () => {
 
     // --- 2. Fetch all Doctors on Mount ---
     useEffect(() => {
-        axios.get('https://localhost:7144/api/Consult/doctors')
+        axios.get('https://doctorappbackend20250804110728-edaah8asafcaerbc.eastasia-01.azurewebsites.net/api/Consult/doctors')
             .then(res => {
                 console.log("Fetched ALL doctors data:", res.data); // Log to verify fee is present
                 setAllDoctors(res.data);
@@ -128,7 +128,7 @@ const Consult = () => {
 
         try {
             const response = await axios.post(
-                'https://localhost:7144/api/Consult/consult',
+                'https://doctorappbackend20250804110728-edaah8asafcaerbc.eastasia-01.azurewebsites.net/api/Consult/consult',
                 consultRequest
                 
             );

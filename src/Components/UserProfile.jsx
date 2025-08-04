@@ -13,7 +13,7 @@ const UserProfile = () => {
 
     const fetchUser = async () => {
       try {
-        const res = await axios.get(`https://localhost:7144/api/Profile/GetUserDetails?email=${email}`);
+        const res = await axios.get(`https://doctorappbackend20250804110728-edaah8asafcaerbc.eastasia-01.azurewebsites.net/api/Profile/GetUserDetails?email=${email}`);
         setUser(res.data);
         setFormData({ newEmail: res.data.email, newPhoneNo: res.data.phno }); // prefill
       } catch (err) {
@@ -34,7 +34,7 @@ const UserProfile = () => {
 
   const handleUpdate = async () => {
     try {
-      const response = await axios.put('https://localhost:7144/api/Profile/updateProfile', {
+      const response = await axios.put('https://doctorappbackend20250804110728-edaah8asafcaerbc.eastasia-01.azurewebsites.net/api/Profile/updateProfile', {
         currentEmail: email,
         newEmail: formData.newEmail,
         newPhoneNo: formData.newPhoneNo
